@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vinser - Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"secondary-fixed-dim": "#6bd8cb", primary: "#3525cd", "surface-bright": "#fcf8ff", "on-surface-variant": "#464555", "on-primary": "#ffffff", "on-primary-container": "#dad7ff", background: "#fcf8ff", "on-primary-fixed": "#0f0069", "surface-tint": "#4d44e3", "surface-container-lowest": "#ffffff", "on-tertiary": "#ffffff", "on-error-container": "#93000a", surface: "#fcf8ff", "on-tertiary-fixed-variant": "#7b2f00", "surface-container-low": "#f5f2ff", "surface-container-highest": "#e4e1ee", "tertiary-container": "#a44100", "error-container": "#ffdad6", "on-tertiary-container": "#ffd2be", "primary-container": "#4f46e5", "on-error": "#ffffff", "surface-container": "#f0ecf9", error: "#ba1a1a", "on-surface": "#1b1b24", "on-secondary-fixed-variant": "#005049", tertiary: "#7e3000", "on-secondary": "#ffffff", "on-primary-fixed-variant": "#3323cc", "inverse-surface": "#302f39", "inverse-primary": "#c3c0ff", "primary-fixed": "#e2dfff", "tertiary-fixed-dim": "#ffb695", "outline-variant": "#c7c4d8", "primary-fixed-dim": "#c3c0ff", "on-secondary-container": "#006f66", "surface-variant": "#e4e1ee", "tertiary-fixed": "#ffdbcc", "surface-dim": "#dcd8e5", outline: "#777587", "secondary-container": "#86f2e4", "inverse-on-surface": "#f3effc", "on-secondary-fixed": "#00201d", "on-tertiary-fixed": "#351000", "on-background": "#1b1b24", "surface-container-high": "#eae6f4", secondary: "#006a61", "secondary-fixed": "#89f5e7"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {"stack-sm": "8px", "stack-lg": "32px", gutter: "24px", "stack-md": "16px", "margin-mobile": "16px", "container-max": "1280px", unit: "8px"}, fontFamily: {"body-sm": ["Be Vietnam Pro"], "display-lg": ["Be Vietnam Pro"], "label-bold": ["Be Vietnam Pro"], "body-base": ["Be Vietnam Pro"], "headline-md": ["Be Vietnam Pro"]}, fontSize: {"body-sm": ["14px", {lineHeight: "1.5", letterSpacing: "0", fontWeight: "400"}], "display-lg": ["48px", {lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700"}], "label-bold": ["12px", {lineHeight: "1", letterSpacing: "0.05em", fontWeight: "600"}], "body-base": ["16px", {lineHeight: "1.6", letterSpacing: "0", fontWeight: "400"}], "headline-md": ["24px", {lineHeight: "1.3", letterSpacing: "-0.01em", fontWeight: "600"}]}}}};</script>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col md:flex-row antialiased font-body-base text-body-base">
+<!-- TopNavBar (Mobile) -->
+<header class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md font-['Plus_Jakarta_Sans'] antialiased docked full-width top-0 border-b border-slate-200 dark:border-slate-800 shadow-sm dark:shadow-none sticky z-50 flex justify-between items-center px-6 h-16 w-full md:hidden">
+<div class="flex items-center gap-4">
+<span class="text-xl font-bold tracking-tight text-indigo-600 dark:text-indigo-400">Vinser</span>
+</div>
+<div class="flex items-center gap-4 text-indigo-600 dark:text-indigo-400">
+<button class="hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors active:scale-95 duration-150 p-2 rounded-full">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<img alt="User profile" class="w-8 h-8 rounded-full object-cover" data-alt="Portrait of a young Asian woman with short black hair, smiling warmly, wearing a simple white top, natural lighting, soft background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw1AgiXWinlNBrdt-9Nfu3JgMaqv5CPX1e5epqa9c9cfcWWVAZFEXjHeTt7_kvh4RpyPnbRTWNnAX-xeHEWxpP5C6iAxcAbUcaLr3gRrYMhGZjS81lPAxNzwN1bCf8mWhEt3q-ozAPJA02NqybvndlYKUV4kfdf3O6_vo_OrRS-sp8JRDecgeA7UfjxpgFm9fPNTVyS0RT5RXbWU3jepijbj4Thsn9ppV1Dvq88J1Ib-nuTtqks-rWWweU5ImfWMhlRGK6R686yLgd"/>
+</div>
+</header>
+<!-- SideNavBar (Desktop) -->
+<nav class="bg-white dark:bg-slate-900 font-['Plus_Jakarta_Sans'] text-sm font-medium h-screen w-64 border-r border-slate-200 dark:border-slate-800 flat no shadows hidden lg:flex flex-col fixed left-0 top-0 py-6 z-40">
+<div class="px-6 mb-8 flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">V</div>
+<div>
+<h1 class="text-lg font-black text-indigo-600 dark:text-indigo-400 leading-tight">Vinser</h1>
+<p class="text-xs text-slate-500">Trusted Connector</p>
+</div>
+</div>
+<ul class="flex-1 px-4 space-y-2">
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-500 dark:text-slate-400 hover:text-indigo-600 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                    Dashboard
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-500 dark:text-slate-400 hover:text-indigo-600 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+                    Discover
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-500 dark:text-slate-400 hover:text-indigo-600 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+                    People
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-500 dark:text-slate-400 hover:text-indigo-600 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="diversity_3">diversity_3</span>
+                    Communities
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300 border-r-4 border-indigo-600 transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+                    Profile
+                </a>
+</li>
+</ul>
+<div class="px-4 mt-auto">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-500 dark:text-slate-400 hover:text-indigo-600 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+                Feedback
+            </a>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-1 w-full max-w-container-max mx-auto px-6 py-8 md:pl-72 lg:pl-[288px] min-h-screen">
+<!-- Header / Hero Section -->
+<div class="relative rounded-xl overflow-hidden mb-stack-lg bg-surface-container-highest h-64 md:h-80 w-full flex items-end p-6 border border-outline-variant/30 shadow-[0_4px_12px_rgba(53,37,205,0.02)]">
+<img alt="Cover" class="absolute inset-0 w-full h-full object-cover opacity-60" data-alt="Abstract blurry background of a modern university campus with glass buildings and green trees, soft sunlight, shallow depth of field, cool tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC844crf308UBOBqblrJFqKrNWLuDz7w95MV6FQI26Zqsvh16qFgVVLSIN3OLCjvl1xoNQCY_7OL5Z5FJA_b8pTFSCb1yyWvNoUm1qL-1fE6e8R_h6gnBa4qeqgPrIpU7uM7Wo508vncpTngcHfAO9dQ3CjZSVsvE-rLZGqTV5nxB-ZgoCJO-PiuVaRjB3L39nZGGYCaiZ3IsbWjGBFEJFDXsJfHQI0TVzlxallc4EGp8HFTeZv5tt8DarEYm-Yrgd3RLVAO520LejE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+<div class="relative z-10 flex flex-col md:flex-row items-end md:items-center gap-6 w-full">
+<div class="relative">
+<img alt="Minh Anh" class="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-surface object-cover shadow-[0_4px_12px_rgba(53,37,205,0.05)]" data-alt="Portrait of a young Asian woman with short black hair, smiling warmly, wearing a simple white top, natural lighting, soft background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBktO2VSzrI6z4PQsC3w37cCFapLFXYWVS-JbhnzHVCSp1KrO1cYWvuKVlFi_pJU6bpFHwnsfa3NmLlQDL69Y-fIqG3pyllOJGTdWZgZp0eoz8FdTs_JFX_R77hmBEf5YDPhbURzf6hmPxNa3M3hc6IEP3DnNKlzwOXcwDxQ7uP5AuxCL0w1bjeTFeD5NdFE213PhQBFxVpQHNuSQA5th96uNF38NrliTCtaIEshFf7MkDO4rZrG6V3dJRJg54BntuUssC7mZi3F0CH"/>
+<div class="absolute bottom-1 right-1 w-5 h-5 bg-secondary rounded-full border-2 border-surface" title="Online"></div>
+</div>
+<div class="flex-1 text-white">
+<h1 class="font-display-lg text-display-lg mb-1 drop-shadow-md">Minh Anh</h1>
+<div class="flex items-center gap-4 font-body-base text-body-base opacity-90">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="school">school</span> FPT University</span>
+<span class="w-1 h-1 rounded-full bg-white/50"></span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="badge">badge</span> Student</span>
+</div>
+</div>
+<div class="flex gap-3 mt-4 md:mt-0">
+<button class="bg-primary hover:bg-primary-fixed-variant text-on-primary font-label-bold text-label-bold h-11 px-6 rounded-lg transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="person_add">person_add</span> Connect
+                    </button>
+<button class="bg-transparent border border-outline hover:bg-white/10 text-white font-label-bold text-label-bold w-11 h-11 rounded-lg transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]" data-icon="more_horiz">more_horiz</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Column: Contact Card -->
+<div class="lg:col-span-4 flex flex-col gap-stack-lg">
+<div class="bg-surface border border-outline-variant/50 rounded-xl p-6 shadow-[0_4px_12px_rgba(53,37,205,0.02)]">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-stack-md flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="contact_page">contact_page</span> Details
+                    </h2>
+<ul class="space-y-4 font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs text-outline">Email</span>
+<span class="font-medium">minhanh.fpt@student.edu.vn</span>
+</div>
+</li>
+<li class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="link">link</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs text-outline">TikTok</span>
+<span class="font-medium hover:text-primary cursor-pointer transition-colors">@minhanh_creates</span>
+</div>
+</li>
+<li class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="public">public</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs text-outline">Facebook</span>
+<span class="font-medium hover:text-primary cursor-pointer transition-colors">Minh Anh Nguyen</span>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<!-- Right Column: Biography & Tags -->
+<div class="lg:col-span-8 flex flex-col gap-stack-lg">
+<!-- Biography -->
+<div class="bg-surface border border-outline-variant/50 rounded-xl p-6 shadow-[0_4px_12px_rgba(53,37,205,0.02)]">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-stack-md flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="history_edu">history_edu</span> About Me
+                    </h2>
+<p class="font-body-base text-body-base text-on-surface-variant leading-relaxed">
+                        Hey! I'm a sophomore at FPT University passionate about digital product design and creating intuitive user experiences. I love blending creativity with logic. Always open to collaborating on hackathons or just grabbing a coffee to talk about the latest design trends.
+                    </p>
+</div>
+<!-- Rich Tags Section -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<!-- Skills -->
+<div class="bg-surface border border-outline-variant/50 rounded-xl p-6 shadow-[0_4px_12px_rgba(53,37,205,0.02)]">
+<h3 class="font-label-bold text-label-bold text-on-surface mb-4 uppercase tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="psychology">psychology</span> Skills
+                        </h3>
+<div class="flex flex-wrap gap-2">
+<span class="bg-secondary/10 text-secondary border border-secondary/20 px-3 py-1.5 rounded-full font-body-sm text-body-sm">UI/UX Design</span>
+<span class="bg-secondary/10 text-secondary border border-secondary/20 px-3 py-1.5 rounded-full font-body-sm text-body-sm">Canva</span>
+<span class="bg-secondary/10 text-secondary border border-secondary/20 px-3 py-1.5 rounded-full font-body-sm text-body-sm">Figma</span>
+<span class="bg-secondary/10 text-secondary border border-secondary/20 px-3 py-1.5 rounded-full font-body-sm text-body-sm">Wireframing</span>
+</div>
+</div>
+<!-- Interests -->
+<div class="bg-surface border border-outline-variant/50 rounded-xl p-6 shadow-[0_4px_12px_rgba(53,37,205,0.02)]">
+<h3 class="font-label-bold text-label-bold text-on-surface mb-4 uppercase tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="favorite">favorite</span> Interests
+                        </h3>
+<div class="flex flex-wrap gap-2">
+<span class="bg-primary/10 text-primary border border-primary/20 px-3 py-1.5 rounded-full font-body-sm text-body-sm">Photography</span>
+<span class="bg-primary/10 text-primary border border-primary/20 px-3 py-1.5 rounded-full font-body-sm text-body-sm">Music</span>
+<span class="bg-primary/10 text-primary border border-primary/20 px-3 py-1.5 rounded-full font-body-sm text-body-sm">Coffee Shops</span>
+</div>
+</div>
+<!-- Needs -->
+<div class="bg-surface border border-outline-variant/50 rounded-xl p-6 shadow-[0_4px_12px_rgba(53,37,205,0.02)] md:col-span-2">
+<h3 class="font-label-bold text-label-bold text-tertiary mb-4 uppercase tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="campaign">campaign</span> Looking For
+                        </h3>
+<div class="flex flex-wrap gap-2">
+<span class="bg-tertiary/10 text-tertiary border border-tertiary/20 px-3 py-1.5 rounded-full font-body-sm text-body-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="group_add">group_add</span> Teammate for Capstone Project
+                            </span>
+<span class="bg-tertiary/10 text-tertiary border border-tertiary/20 px-3 py-1.5 rounded-full font-body-sm text-body-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="menu_book">menu_book</span> Study Buddy for HCI
+                            </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Community Acknowledgments -->
+<div class="mt-stack-lg">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-stack-md flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="hotel_class">hotel_class</span> Community Validation
+            </h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="bg-surface border border-outline-variant/50 rounded-xl p-6 shadow-[0_4px_12px_rgba(53,37,205,0.02)] flex flex-col">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-lg">
+<span class="material-symbols-outlined" data-icon="lightbulb">lightbulb</span>
+</div>
+<div>
+<h3 class="font-label-bold text-label-bold text-on-surface">Creative Problem Solver</h3>
+<p class="text-xs text-outline">Endorsed for UI/UX</p>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex-1 italic">
+                        "Minh Anh always brings fresh perspectives to our design critiques. Great eye for detail."
+                    </p>
+<div class="mt-4 pt-4 border-t border-outline-variant/20 flex items-center justify-between">
+<div class="flex -space-x-2">
+<img alt="Peer" class="w-6 h-6 rounded-full border-2 border-surface object-cover" data-alt="Small avatar portrait of a young man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1cqM0YNOT_1dPLoqDx6V8HcmgYk63Vi6SfLr2Q4en7LjsJRc1x1b7qJpiZWvWVVH2Dv__QJo2HHatT_3EdT1bU5ZHAXxJV30bY45VBKbDUzC6khPPJ5PGQFGMNKhKmV4itYaa8lw3N9_AP4kGaWJB9pApxgHtwNL-XT--3vbfVGEtz4V8C_6dGHi3qOrKI-1bzjwncEqN_d55XdhXn4lrXM-GE8dFUZGD6HIxMQ0TBnyGjOdfTwXLjtf_vYx2UHFxivtTmJTgQDhO"/>
+<img alt="Peer" class="w-6 h-6 rounded-full border-2 border-surface object-cover" data-alt="Small avatar portrait of a young woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOpZDl8nx2PD458Qyb7WKLwEfIahr-xp4mZyVOuWASSPxUHvt32-2IAXCDJDXeIHrV6Pxmu9oMriNePNEhkXYPoGmmgLH59RQRBy2aOdzR2A-QDjB5GNd_cdmDaHOqSamVchSl1t2hgRt9WHpV-G3vZT8S9nzLs1j6_Nbdtk6lyq_PQ1mYeUfUwyK6dWxGfL3Wj_736XgPTKBvv5pE6Qr5svpE35RjVJZ1avNGXbS4CAcIhPL5BZv_QSVviFGc4AYeNn-Av9fjSWcH"/>
+<img alt="Peer" class="w-6 h-6 rounded-full border-2 border-surface object-cover" data-alt="Small avatar portrait of a young man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDECuuFLhca4JL4yWx2WmQiTful4SvVlQDzuUJ7inEuRq897gJ8KQwrYRSGObIT5gDXPtE2g77MEB0H1z8hp4Fc4se_BZo9_zLV-NKNXDQk3J8wqF-9E_XciOgLoD289fwjNck-6-epeVr4Ueg-JY_bAULgH7_LfeU1g4iqN257ejNDAEjNk1M_eca_pjI3FiUF-DfVVO1WpzowuOYRyHCuKAhLAG5_nanLh144jbVsnfLmOFh7jRAuGqqlqjmn_yKOySSBqo2Nu5Aj"/>
+</div>
+<span class="font-label-bold text-label-bold text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="thumb_up">thumb_up</span> 12 agree
+                        </span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface border border-outline-variant/50 rounded-xl p-6 shadow-[0_4px_12px_rgba(53,37,205,0.02)] flex flex-col">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary font-bold text-lg">
+<span class="material-symbols-outlined" data-icon="handshake">handshake</span>
+</div>
+<div>
+<h3 class="font-label-bold text-label-bold text-on-surface">Reliable Teammate</h3>
+<p class="text-xs text-outline">Endorsed for Collaboration</p>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex-1 italic">
+                        "Never misses a deadline and always communicates clearly. A pleasure to work with on group assignments."
+                    </p>
+<div class="mt-4 pt-4 border-t border-outline-variant/20 flex items-center justify-between">
+<div class="flex -space-x-2">
+<img alt="Peer" class="w-6 h-6 rounded-full border-2 border-surface object-cover" data-alt="Small avatar portrait of a mature woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeiv1wzr2A-V3Kv_OtoT9zXy-xp_nnkGLFOqEOLchs7yBjkhRhnJHjBUamUEpQ7z3T3Mt5w5-g7Nj0B8_VQkd80Nt2ZMQUOcGZNV9zvIx1uEhogDQuAE4-tlgH0Pz7Xe6asBUSzmGlRw5n8xA-AHiu41EfK0iTEt_9e8LhOIKaQ3O8O6EVAZooFr6VS6FTJzhGgbYt4hwN9jSzR2pvEJvcJQTK-Z3gTFk50n9lMhgLefeGTMdw7Xy85kCI4ELdVBdyeTkc4onnIPuH"/>
+<img alt="Peer" class="w-6 h-6 rounded-full border-2 border-surface object-cover" data-alt="Small avatar portrait of a young man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7cXUCl1eA5ptFWnzqhA_ENM0dDAXJnshTUx5UXRraq4tGmvB4VxCg-gSRCgRCG4G_T5bjkjU4bIvXmFsG9GyJWSHz09R2hviA8h3znWRd--J7i-ba-tY1oMC-w4XKSyg8CxjqRZNXaNXCYfQoMPwrwsjCmxG40m9mvlG-TQwcqGEDl80OGXsmOUtxPi5PoNrYyYtHtiMsNnisevp33zZJwlGBMLgCIm8oLAjbkF5reUEdUyY99wYdMB9fVJ9ePhv1UmU956umUiE2"/>
+</div>
+<span class="font-label-bold text-label-bold text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="thumb_up">thumb_up</span> 8 agree
+                        </span>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

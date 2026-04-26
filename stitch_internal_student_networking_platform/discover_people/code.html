@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>People Search &amp; Discovery - Vinser</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"secondary-fixed-dim": "#6bd8cb", primary: "#3525cd", "surface-bright": "#fcf8ff", "on-surface-variant": "#464555", "on-primary": "#ffffff", "on-primary-container": "#dad7ff", background: "#fcf8ff", "on-primary-fixed": "#0f0069", "surface-tint": "#4d44e3", "surface-container-lowest": "#ffffff", "on-tertiary": "#ffffff", "on-error-container": "#93000a", surface: "#fcf8ff", "on-tertiary-fixed-variant": "#7b2f00", "surface-container-low": "#f5f2ff", "surface-container-highest": "#e4e1ee", "tertiary-container": "#a44100", "error-container": "#ffdad6", "on-tertiary-container": "#ffd2be", "primary-container": "#4f46e5", "on-error": "#ffffff", "surface-container": "#f0ecf9", error: "#ba1a1a", "on-surface": "#1b1b24", "on-secondary-fixed-variant": "#005049", tertiary: "#7e3000", "on-secondary": "#ffffff", "on-primary-fixed-variant": "#3323cc", "inverse-surface": "#302f39", "inverse-primary": "#c3c0ff", "primary-fixed": "#e2dfff", "tertiary-fixed-dim": "#ffb695", "outline-variant": "#c7c4d8", "primary-fixed-dim": "#c3c0ff", "on-secondary-container": "#006f66", "surface-variant": "#e4e1ee", "tertiary-fixed": "#ffdbcc", "surface-dim": "#dcd8e5", outline: "#777587", "secondary-container": "#86f2e4", "inverse-on-surface": "#f3effc", "on-secondary-fixed": "#00201d", "on-tertiary-fixed": "#351000", "on-background": "#1b1b24", "surface-container-high": "#eae6f4", secondary: "#006a61", "secondary-fixed": "#89f5e7"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {"stack-sm": "8px", "stack-lg": "32px", gutter: "24px", "stack-md": "16px", "margin-mobile": "16px", "container-max": "1280px", unit: "8px"}, fontFamily: {"body-sm": ["Be Vietnam Pro"], "display-lg": ["Be Vietnam Pro"], "label-bold": ["Be Vietnam Pro"], "body-base": ["Be Vietnam Pro"], "headline-md": ["Be Vietnam Pro"]}, fontSize: {"body-sm": ["14px", {lineHeight: "1.5", letterSpacing: "0", fontWeight: "400"}], "display-lg": ["48px", {lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700"}], "label-bold": ["12px", {lineHeight: "1", letterSpacing: "0.05em", fontWeight: "600"}], "body-base": ["16px", {lineHeight: "1.6", letterSpacing: "0", fontWeight: "400"}], "headline-md": ["24px", {lineHeight: "1.3", letterSpacing: "-0.01em", fontWeight: "600"}]}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Hide scrollbar for clean look in sidebars */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-base text-body-base antialiased flex w-full min-h-screen">
+<!-- Side NavBar (From JSON) -->
+<nav class="hidden lg:flex flex-col fixed left-0 top-0 h-full py-6 bg-white dark:bg-slate-900 h-screen w-64 border-r border-slate-200 dark:border-slate-800 transition-all duration-200 ease-in-out font-['Plus_Jakarta_Sans'] text-sm font-medium z-40">
+<!-- Header / Brand -->
+<div class="px-6 mb-8 flex flex-col gap-1">
+<span class="text-lg font-black text-indigo-600 dark:text-indigo-400">Vinser</span>
+<span class="text-slate-500 dark:text-slate-400 text-xs tracking-wider uppercase">Trusted Connector</span>
+</div>
+<!-- Navigation Links -->
+<div class="flex flex-col flex-1 w-full mt-4">
+<a class="flex items-center gap-4 px-6 py-3 w-full text-slate-500 dark:text-slate-400 hover:text-indigo-600 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-3 w-full text-slate-500 dark:text-slate-400 hover:text-indigo-600 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span>Discover</span>
+</a>
+<!-- ACTIVE TAB: People -->
+<a class="flex items-center gap-4 px-6 py-3 w-full bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300 border-r-4 border-indigo-600 transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined icon-fill" data-icon="group" data-weight="fill">group</span>
+<span class="font-semibold">People</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-3 w-full text-slate-500 dark:text-slate-400 hover:text-indigo-600 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="diversity_3">diversity_3</span>
+<span>Communities</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-3 w-full text-slate-500 dark:text-slate-400 hover:text-indigo-600 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+<span>Feedback</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Wrapper -->
+<div class="flex-1 lg:ml-64 flex flex-col min-h-screen">
+<!-- Top NavBar (From JSON) -->
+<header class="sticky top-0 z-50 flex justify-between items-center px-6 h-16 w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-md full-width top-0 border-b border-slate-200 dark:border-slate-800 shadow-sm dark:shadow-none font-['Plus_Jakarta_Sans'] antialiased">
+<!-- Left Side: Mobile Logo & Search Trigger -->
+<div class="flex items-center gap-4">
+<span class="lg:hidden text-xl font-bold tracking-tight text-indigo-600 dark:text-indigo-400">Vinser</span>
+<div class="hidden md:flex items-center bg-slate-100 dark:bg-slate-800 rounded-full px-4 h-10 w-64 text-slate-500">
+<span class="material-symbols-outlined text-[20px] mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full outline-none placeholder-slate-400" placeholder="Quick search..." type="text"/>
+</div>
+</div>
+<!-- Right Side: Actions & Profile -->
+<div class="flex items-center gap-4">
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors active:scale-95 duration-150">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<div class="w-9 h-9 rounded-full overflow-hidden border border-slate-200 cursor-pointer active:scale-95 duration-150">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="close up portrait of a young woman with natural makeup and subtle smile on a light neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgKUogQsdSprQ-IlLI1lNv7Ik0_EmPsQHGjMlCDSbvywBn4gT-6lveQtoUMVrQdV_YPfcyd7WPsNJZSW1LeAO9BVr7SaRT976BAdJFaAOww0jT2pxTUEyAy-YijC75Cs7l6WYKI_jZwLCbiY3egI0Qx8CFCISL9bGMIcBeFIMPQ3F5T0ZRHIlp0iHA280ARlA2gKkrpSZ86Ow6CJa23VI4gzEsu01I_7gyZEOeI1VH7dx6VRroKK66U6XdqwVrshIiu26H1kGg-P57"/>
+</div>
+</div>
+</header>
+<!-- Page Canvas -->
+<main class="flex-1 w-full max-w-[container-max] mx-auto px-margin-mobile md:px-6 py-8 flex flex-col md:flex-row gap-gutter">
+<!-- Left Filter Panel -->
+<aside class="w-full md:w-64 shrink-0 flex flex-col gap-stack-lg hidden md:flex">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline">tune</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Filters</h2>
+</div>
+<!-- Filter Category: School Status -->
+<div class="flex flex-col gap-stack-sm border-b border-outline-variant pb-stack-md">
+<h3 class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-wider mb-2">School Status</h3>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="w-4 h-4 rounded border-outline-variant text-primary focus:ring-primary focus:ring-offset-background" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors">Current Student</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="w-4 h-4 rounded border-outline-variant text-primary focus:ring-primary focus:ring-offset-background" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors">Alumni</span>
+</label>
+</div>
+<!-- Filter Category: Skills -->
+<div class="flex flex-col gap-stack-sm border-b border-outline-variant pb-stack-md">
+<h3 class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-wider mb-2">Skills</h3>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded border-outline-variant text-primary focus:ring-primary focus:ring-offset-background" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors">Machine Learning</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="w-4 h-4 rounded border-outline-variant text-primary focus:ring-primary focus:ring-offset-background" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors">UI/UX Design</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded border-outline-variant text-primary focus:ring-primary focus:ring-offset-background" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors">Data Analysis</span>
+</label>
+<button class="text-left font-label-bold text-label-bold text-primary mt-2 hover:underline">Show more...</button>
+</div>
+<!-- Filter Category: Interests -->
+<div class="flex flex-col gap-stack-sm pb-stack-md">
+<h3 class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-wider mb-2">Interests</h3>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="w-4 h-4 rounded border-outline-variant text-primary focus:ring-primary focus:ring-offset-background" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors">Startups &amp; VC</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded border-outline-variant text-primary focus:ring-primary focus:ring-offset-background" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors">Sustainability</span>
+</label>
+</div>
+</aside>
+<!-- Main Search & Grid Area -->
+<div class="flex-1 flex flex-col min-w-0">
+<!-- Main Search Bar -->
+<div class="w-full mb-stack-md">
+<div class="relative w-full h-[56px] flex items-center bg-surface-container-low rounded-xl border border-transparent focus-within:border-primary focus-within:bg-surface focus-within:shadow-sm transition-all duration-200">
+<span class="material-symbols-outlined text-on-surface-variant ml-4 mr-3">search</span>
+<input class="flex-1 h-full bg-transparent border-none focus:ring-0 font-body-base text-body-base text-on-surface placeholder-on-surface-variant outline-none" placeholder="Search people by name, skills, or needs..." type="text"/>
+<button class="bg-primary text-on-primary h-[40px] px-6 rounded-lg font-label-bold text-label-bold mr-2 hover:bg-on-primary-fixed transition-colors">Search</button>
+</div>
+</div>
+<!-- Trending Tags -->
+<div class="flex flex-wrap items-center gap-3 mb-stack-lg">
+<span class="font-body-sm text-body-sm text-outline">Trending:</span>
+<button class="px-3 py-1.5 bg-surface-container rounded-full font-label-bold text-label-bold text-on-surface hover:bg-surface-variant transition-colors border border-outline-variant">#AI</button>
+<button class="px-3 py-1.5 bg-surface-container rounded-full font-label-bold text-label-bold text-on-surface hover:bg-surface-variant transition-colors border border-outline-variant">#Startup</button>
+<button class="px-3 py-1.5 bg-surface-container rounded-full font-label-bold text-label-bold text-on-surface hover:bg-surface-variant transition-colors border border-outline-variant">#Volunteer</button>
+<button class="px-3 py-1.5 bg-surface-container rounded-full font-label-bold text-label-bold text-on-surface hover:bg-surface-variant transition-colors border border-outline-variant">#FinTech</button>
+</div>
+<!-- Users Grid -->
+<div class="grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 gap-gutter">
+<!-- User Card 1 -->
+<div class="bg-surface rounded-xl border border-outline-variant shadow-sm p-[20px] flex flex-col gap-4 hover:shadow-md transition-shadow duration-200 relative group">
+<!-- Top Row: Avatar & Identity -->
+<div class="flex items-start gap-4">
+<div class="relative w-14 h-14 shrink-0">
+<img alt="User Avatar" class="w-full h-full rounded-full object-cover" data-alt="portrait of a young man with short dark hair in a casual blue shirt outdoors with soft daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBft1jryMniJr8z9AXv773Ob9FEGs5a-gdFQEL_42P9zY3JlDgXRb2Yb6Yho1x3C6BbfNdiP4fK58UPwYcL_dn7YhKtD5SSPK-FUYPo8dc9MYmcexHZTlImc9RR6jo0jBUZGvmTG0e9WR86_gdoG8M8oOrzc10c80VM-7j5rsHKSMgF5jlmBel6hRnWYXXABSUqCUGLxianGUsob2R1I3PKGbKjtPLpqYKv1pPr6phMzDstWZqtooaTz4WGYDwg0I5dw4yvevu0FaVA"/>
+<!-- Online Status Badge -->
+<div class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-[#10B981] rounded-full border-2 border-surface"></div>
+</div>
+<div class="flex-1 min-w-0 flex flex-col">
+<h3 class="font-headline-md text-[18px] text-on-surface truncate">David Chen</h3>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="material-symbols-outlined text-[16px] text-primary">school</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">NEU • Computer Science</span>
+</div>
+<span class="font-body-sm text-[13px] text-outline mt-1 truncate">Prev. SWE Intern @ Google</span>
+</div>
+</div>
+<!-- Highlight Tags -->
+<div class="flex flex-wrap gap-2 mt-2">
+<!-- Skill Chip (Soft Green) -->
+<span class="px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-bold text-[11px] uppercase tracking-wider">Full-Stack</span>
+<span class="px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-bold text-[11px] uppercase tracking-wider">Machine Learning</span>
+<!-- Need Chip (Soft Orange) -->
+<span class="px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-bold text-[11px] uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">volunteer_activism</span>
+                                Needs: UI Designer
+                            </span>
+</div>
+<!-- Action Row -->
+<div class="mt-auto pt-4 border-t border-surface-container-high flex gap-3">
+<button class="flex-1 h-[44px] flex items-center justify-center rounded-lg border-2 border-secondary text-secondary font-label-bold text-label-bold hover:bg-secondary hover:text-on-secondary transition-colors duration-200">
+                                Connect
+                            </button>
+<button class="w-[44px] h-[44px] flex items-center justify-center rounded-lg border-2 border-outline-variant text-on-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+</div>
+<!-- User Card 2 -->
+<div class="bg-surface rounded-xl border border-outline-variant shadow-sm p-[20px] flex flex-col gap-4 hover:shadow-md transition-shadow duration-200 relative group">
+<div class="flex items-start gap-4">
+<div class="relative w-14 h-14 shrink-0">
+<img alt="User Avatar" class="w-full h-full rounded-full object-cover" data-alt="portrait of a young woman with long wavy hair smiling warmly wearing a grey sweater in a bright modern office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACo4EJr4cN3gOjxqmxaQM83VBzSN6nquLKoH8lBcMLOfwpWLSGqVx8sDfsRgQDWLUsm9n530_XjvNbIvzowJmdJD5E0_kL1L_tOfFFon0HIxWzmSNgFQvwvVMS2UOCCHO10jckqa0eEE42wGO5jqnVxkDsOL_cPnLxRjesrIMQ-QeYvBTb78JGPfrcqidjPTs4Y7SqVjFTCj4Bq7fOBRdX_Ny29Jxi-413eXC7HTNhAxBcaCelrZGMTt66aLQyXF8pBEvIiNO5Pz-o"/>
+</div>
+<div class="flex-1 min-w-0 flex flex-col">
+<h3 class="font-headline-md text-[18px] text-on-surface truncate">Sarah Jenkins</h3>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="material-symbols-outlined text-[16px] text-primary">school</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">MIT • Interaction Design</span>
+</div>
+<span class="font-body-sm text-[13px] text-outline mt-1 truncate">Building inclusive digital tools</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 mt-2">
+<span class="px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-bold text-[11px] uppercase tracking-wider">UX Research</span>
+<span class="px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-bold text-[11px] uppercase tracking-wider">Prototyping</span>
+<span class="px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-bold text-[11px] uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">group_add</span>
+                                Needs: Co-Founder
+                            </span>
+</div>
+<div class="mt-auto pt-4 border-t border-surface-container-high flex gap-3">
+<button class="flex-1 h-[44px] flex items-center justify-center rounded-lg border-2 border-secondary text-secondary font-label-bold text-label-bold hover:bg-secondary hover:text-on-secondary transition-colors duration-200">
+                                Connect
+                            </button>
+<button class="w-[44px] h-[44px] flex items-center justify-center rounded-lg border-2 border-outline-variant text-on-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+</div>
+<!-- User Card 3 -->
+<div class="bg-surface rounded-xl border border-outline-variant shadow-sm p-[20px] flex flex-col gap-4 hover:shadow-md transition-shadow duration-200 relative group">
+<div class="flex items-start gap-4">
+<div class="relative w-14 h-14 shrink-0">
+<img alt="User Avatar" class="w-full h-full rounded-full object-cover" data-alt="close up headshot of a mature man with glasses and short beard looking confident against a plain white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfSecxYBu0N5YIU_kthoSqOZmZQgwNkmWoDd5eyuSqqM1VQgdGQS41KXp4fmTBUvkTkYH_irVSkACdIg-0u9PKrUOmvIR2tAWYD369PM-wjDGxdaGeD9NR6kRpJTJMa4XOmCbvE1WW404NT6-U169A8D5SfNstPgcvPftLbrqM7XLyMSfB0EYsf_850kYRNbFvpZSc4nUK73lkA7BgY3-Bunazkno4sYhGYW3ufVlEI-M46V8hN6K7ny_8EQy4LybupjAa7dSNSThP"/>
+<div class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-[#10B981] rounded-full border-2 border-surface"></div>
+</div>
+<div class="flex-1 min-w-0 flex flex-col">
+<h3 class="font-headline-md text-[18px] text-on-surface truncate">Marcus Vance</h3>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="material-symbols-outlined text-[16px] text-primary">school</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Harvard • Alumni (MBA)</span>
+</div>
+<span class="font-body-sm text-[13px] text-outline mt-1 truncate">Venture Capital &amp; Strategy</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 mt-2">
+<span class="px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-bold text-[11px] uppercase tracking-wider">Fundraising</span>
+<span class="px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-bold text-[11px] uppercase tracking-wider">B2B SaaS</span>
+<span class="px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-bold text-[11px] uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">psychology</span>
+                                Needs: Mentorship
+                            </span>
+</div>
+<div class="mt-auto pt-4 border-t border-surface-container-high flex gap-3">
+<button class="flex-1 h-[44px] flex items-center justify-center rounded-lg border-2 border-secondary text-secondary font-label-bold text-label-bold hover:bg-secondary hover:text-on-secondary transition-colors duration-200">
+                                Connect
+                            </button>
+<button class="w-[44px] h-[44px] flex items-center justify-center rounded-lg border-2 border-outline-variant text-on-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+</div>
+<!-- User Card 4 -->
+<div class="bg-surface rounded-xl border border-outline-variant shadow-sm p-[20px] flex flex-col gap-4 hover:shadow-md transition-shadow duration-200 relative group">
+<div class="flex items-start gap-4">
+<div class="relative w-14 h-14 shrink-0">
+<img alt="User Avatar" class="w-full h-full rounded-full object-cover" data-alt="portrait of a smiling woman with shoulder length blonde hair wearing a white top outdoors with soft blurred background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdBJn4WkPmljqrqCtNuoIky-OxfRduc1qYqg3F9kZUjekAxDD6iNU9ZNn_4LQzO5uCAUCVSJtEs9DU7osPJgy4GjbhjUdEDKQTk5IgxPcUX9CwXx2IiDi7j38AzNrVRTiUIoO4we8CrGdwAamv07oK9dNqj3tZPN4I-mwiM_FkSGzqk-BN1EtJEygTce3uvMqmkObNlIK87hlpT4zdXyK9IDBekd1S8UQ9zRNBTp8TtTtUdEzrL74K9tNNNB1yqRTHBrlOOwlKv30y"/>
+</div>
+<div class="flex-1 min-w-0 flex flex-col">
+<h3 class="font-headline-md text-[18px] text-on-surface truncate">Elena Rostova</h3>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="material-symbols-outlined text-[16px] text-primary">school</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">BU • Public Health</span>
+</div>
+<span class="font-body-sm text-[13px] text-outline mt-1 truncate">Passionate about global equity</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 mt-2">
+<span class="px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-bold text-[11px] uppercase tracking-wider">Policy Analysis</span>
+<span class="px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-bold text-[11px] uppercase tracking-wider">Spanish</span>
+<span class="px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-bold text-[11px] uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">handshake</span>
+                                Needs: Project Collab
+                            </span>
+</div>
+<div class="mt-auto pt-4 border-t border-surface-container-high flex gap-3">
+<button class="flex-1 h-[44px] flex items-center justify-center rounded-lg border-2 border-secondary text-secondary font-label-bold text-label-bold hover:bg-secondary hover:text-on-secondary transition-colors duration-200">
+                                Connect
+                            </button>
+<button class="w-[44px] h-[44px] flex items-center justify-center rounded-lg border-2 border-outline-variant text-on-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

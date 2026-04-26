@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Community Feedback - Vinser</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"secondary-fixed-dim": "#6bd8cb", primary: "#3525cd", "surface-bright": "#fcf8ff", "on-surface-variant": "#464555", "on-primary": "#ffffff", "on-primary-container": "#dad7ff", background: "#fcf8ff", "on-primary-fixed": "#0f0069", "surface-tint": "#4d44e3", "surface-container-lowest": "#ffffff", "on-tertiary": "#ffffff", "on-error-container": "#93000a", surface: "#fcf8ff", "on-tertiary-fixed-variant": "#7b2f00", "surface-container-low": "#f5f2ff", "surface-container-highest": "#e4e1ee", "tertiary-container": "#a44100", "error-container": "#ffdad6", "on-tertiary-container": "#ffd2be", "primary-container": "#4f46e5", "on-error": "#ffffff", "surface-container": "#f0ecf9", error: "#ba1a1a", "on-surface": "#1b1b24", "on-secondary-fixed-variant": "#005049", tertiary: "#7e3000", "on-secondary": "#ffffff", "on-primary-fixed-variant": "#3323cc", "inverse-surface": "#302f39", "inverse-primary": "#c3c0ff", "primary-fixed": "#e2dfff", "tertiary-fixed-dim": "#ffb695", "outline-variant": "#c7c4d8", "primary-fixed-dim": "#c3c0ff", "on-secondary-container": "#006f66", "surface-variant": "#e4e1ee", "tertiary-fixed": "#ffdbcc", "surface-dim": "#dcd8e5", outline: "#777587", "secondary-container": "#86f2e4", "inverse-on-surface": "#f3effc", "on-secondary-fixed": "#00201d", "on-tertiary-fixed": "#351000", "on-background": "#1b1b24", "surface-container-high": "#eae6f4", secondary: "#006a61", "secondary-fixed": "#89f5e7"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {"stack-sm": "8px", "stack-lg": "32px", gutter: "24px", "stack-md": "16px", "margin-mobile": "16px", "container-max": "1280px", unit: "8px"}, fontFamily: {"body-sm": ["Be Vietnam Pro"], "display-lg": ["Be Vietnam Pro"], "label-bold": ["Be Vietnam Pro"], "body-base": ["Be Vietnam Pro"], "headline-md": ["Be Vietnam Pro"]}, fontSize: {"body-sm": ["14px", {lineHeight: "1.5", letterSpacing: "0", fontWeight: "400"}], "display-lg": ["48px", {lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700"}], "label-bold": ["12px", {lineHeight: "1", letterSpacing: "0.05em", fontWeight: "600"}], "body-base": ["16px", {lineHeight: "1.6", letterSpacing: "0", fontWeight: "400"}], "headline-md": ["24px", {lineHeight: "1.3", letterSpacing: "-0.01em", fontWeight: "600"}]}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Custom Utilities based on Style Guidance */
+        .elevation-1 {
+            border: 1px solid #E2E8F0;
+            box-shadow: 0 4px 4px rgba(53, 37, 205, 0.02);
+        }
+        .elevation-2 {
+            border: 1px solid #E2E8F0;
+            box-shadow: 0 12px 24px rgba(53, 37, 205, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-background min-h-screen text-on-background font-body-base">
+<!-- SideNavBar (JSON Configured) -->
+<aside class="bg-white dark:bg-slate-900 text-indigo-600 dark:text-indigo-400 font-['Plus_Jakarta_Sans'] text-sm font-medium h-screen w-64 border-r border-slate-200 dark:border-slate-800 flat no shadows hidden lg:flex flex-col fixed left-0 top-0 h-full py-6 z-40 transition-all duration-200 ease-in-out">
+<div class="px-6 mb-8 flex items-center gap-3">
+<div class="h-10 w-10 rounded-xl bg-indigo-100 flex items-center justify-center text-indigo-600">
+<span class="material-symbols-outlined text-2xl icon-fill" data-icon="hub">hub</span>
+</div>
+<div>
+<h1 class="text-lg font-black text-indigo-600 dark:text-indigo-400 leading-none">Vinser</h1>
+<span class="text-xs text-slate-500 font-normal">Trusted Connector</span>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-1">
+<!-- Inactive Tab 1 -->
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-500 dark:text-slate-400 hover:text-indigo-600 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<!-- Inactive Tab 2 -->
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-500 dark:text-slate-400 hover:text-indigo-600 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span>Discover</span>
+</a>
+<!-- Inactive Tab 3 -->
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-500 dark:text-slate-400 hover:text-indigo-600 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span>People</span>
+</a>
+<!-- Inactive Tab 4 -->
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-500 dark:text-slate-400 hover:text-indigo-600 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="diversity_3">diversity_3</span>
+<span>Communities</span>
+</a>
+<!-- Active Tab 5 -->
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300 border-r-4 border-indigo-600 transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined icon-fill" data-icon="chat_bubble">chat_bubble</span>
+<span>Feedback</span>
+</a>
+</nav>
+</aside>
+<!-- Main Layout Wrapper to accommodate SideNav on Desktop -->
+<div class="lg:ml-64 flex flex-col min-h-screen">
+<!-- TopNavBar (JSON Configured) -->
+<header class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md text-indigo-600 dark:text-indigo-400 font-['Plus_Jakarta_Sans'] antialiased docked full-width top-0 border-b border-slate-200 dark:border-slate-800 shadow-sm dark:shadow-none sticky top-0 z-30 flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-4 flex-1">
+<!-- Mobile Menu Button (Visible only md:hidden) -->
+<button class="lg:hidden p-2 -ml-2 text-slate-600 hover:bg-slate-100 rounded-lg active:scale-95 duration-150">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<!-- Search Bar (on_left as per JSON) -->
+<div class="hidden sm:flex items-center bg-slate-100 dark:bg-slate-800 rounded-full px-4 py-2 w-64 border border-transparent focus-within:border-indigo-300 transition-colors">
+<span class="material-symbols-outlined text-slate-400 mr-2 text-[20px]" data-icon="search">search</span>
+<input class="bg-transparent border-none outline-none text-sm w-full text-slate-700 dark:text-slate-300 placeholder-slate-400 font-['Inter']" placeholder="Search..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<!-- Trailing Icon Actions -->
+<button class="p-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-full active:scale-95 duration-150 relative">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-indigo-600 rounded-full border-2 border-white"></span>
+</button>
+<div class="h-8 w-[1px] bg-slate-200 dark:bg-slate-700 mx-2"></div>
+<!-- Profile Image -->
+<button class="flex items-center gap-2 hover:bg-slate-100 dark:hover:bg-slate-800 p-1 pr-3 rounded-full transition-colors active:scale-95 duration-150">
+<img alt="User profile" class="w-8 h-8 rounded-full object-cover border border-slate-200" data-alt="close up portrait of young woman with clear skin and natural makeup looking at camera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7LZZJ0nyGoO2nSl0Nl6jLzly13KxBKo4jfG8LeFJqnnZ5vnObOewn3rIPZLrKtoyIsyqcQAhJDjp6YFIDzTXrDaGtdKWaPVzN7H5Z6v8tdX_YKBqd-5KGP_wmbzy8ik7NgUg4fh91Sx3BbltqLgUIPPNk0HaNhzcSqrhngvtOU4UOc79N8TWVfMURW1TljZB39lAhRb7aR0zyT8isp7yvokFsL3adl2OLpem9yhZQHjkJoi_7Mbhmj2L_fSyMsH5QiWKd9B_M2OGi"/>
+<span class="material-symbols-outlined text-slate-400 text-[20px]" data-icon="expand_more">expand_more</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 p-margin-mobile lg:p-stack-lg max-w-container-max mx-auto w-full">
+<!-- Page Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-stack-md mb-stack-lg">
+<div>
+<h2 class="font-display-lg text-display-lg text-on-background mb-stack-sm text-primary">Community Feedback</h2>
+<p class="font-body-base text-body-base text-on-surface-variant max-w-2xl">Help shape our campus environment. Share your ideas, upvote issues you care about, and track our progress together.</p>
+</div>
+<button class="bg-primary hover:bg-primary-container text-on-primary font-label-bold text-label-bold h-[44px] px-6 rounded-full flex items-center justify-center gap-2 transition-all active:scale-95 shadow-sm whitespace-nowrap">
+<span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+                    Create Feedback
+                </button>
+</div>
+<!-- Asymmetric Bento Grid for Feedback Items -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-gutter">
+<!-- Top Voted Item (Spans 2 cols on Desktop) -->
+<article class="bg-surface-container-lowest elevation-1 rounded-xl p-stack-md flex flex-col md:col-span-2 xl:col-span-2 relative overflow-hidden group">
+<!-- Subtle background decoration -->
+<div class="absolute -right-20 -top-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-all duration-500"></div>
+<div class="flex justify-between items-start mb-stack-md relative z-10">
+<div class="flex items-center gap-2">
+<span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full font-label-bold text-label-bold">Infrastructure</span>
+</div>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-bold text-label-bold border border-secondary/20 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="hourglass_empty">hourglass_empty</span>
+                            In Review
+                        </span>
+</div>
+<div class="flex-1 relative z-10">
+<h3 class="font-headline-md text-headline-md text-on-background mb-stack-sm">Improve Cafeteria Wi-Fi Connectivity</h3>
+<p class="font-body-base text-body-base text-on-surface-variant line-clamp-2 md:line-clamp-none max-w-2xl mb-stack-md">The Wi-Fi in the main cafeteria area drops constantly during peak lunch hours. It makes it nearly impossible to review notes or collaborate on group projects while eating. Can we get additional access points installed?</p>
+</div>
+<div class="flex items-center justify-between mt-auto pt-stack-md border-t border-outline-variant/30 relative z-10">
+<div class="flex items-center gap-3">
+<img alt="Student avatar" class="w-8 h-8 rounded-full object-cover" data-alt="portrait of young man with short hair wearing casual t-shirt" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG5izKfVD0jE0s2Bd9_W5molaejzHQl7jhdCOUluj2moKwB4tPoiRxCoySqGltMtCUscl3X1Sa0xn-jk-nmfUjt5GXXxg6rBHwYYl0RAc-nRgQzJYCctvyV3255KcTHzMNii-4ja_1Jj8e24y4wYOhHRifWih-HEJsBiicuT6suCCjMIzsNdauBLMGCqNKwFzq7yntS-nriqrJB1nlOPlh0WiTRUB2vwwj8GcJb4lahcxExl-UAMAZPyA1vPWmxAGBT1xZzllZGh_R"/>
+<span class="font-body-sm text-body-sm text-outline">Posted 2 days ago</span>
+</div>
+<!-- Prominent Voting Mechanism -->
+<div class="flex items-center bg-surface-container rounded-full p-1 border border-outline-variant/50">
+<button class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-primary-fixed hover:text-primary transition-colors text-outline">
+<span class="material-symbols-outlined icon-fill text-[20px]" data-icon="thumb_up">thumb_up</span>
+</button>
+<span class="font-label-bold text-label-bold text-on-background px-2 min-w-[3ch] text-center">248</span>
+<button class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-error-container hover:text-error transition-colors text-outline">
+<span class="material-symbols-outlined text-[20px]" data-icon="thumb_down">thumb_down</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Standard Item 1 -->
+<article class="bg-surface-container-lowest elevation-1 rounded-xl p-stack-md flex flex-col hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-stack-md">
+<div class="flex items-center gap-2">
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full font-label-bold text-label-bold">Academic</span>
+</div>
+<span class="bg-primary-fixed text-on-primary-fixed px-3 py-1 rounded-full font-label-bold text-label-bold border border-primary/20 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="fiber_new">fiber_new</span>
+                            New
+                        </span>
+</div>
+<div class="flex-1">
+<h3 class="font-headline-md text-[20px] leading-tight text-on-background mb-stack-sm">Extend Library Hours during finals</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3 mb-stack-md">Currently the library closes at 10 PM. During finals week, many of us need a quiet study space much later. Suggesting an extension to 2 AM for those two weeks.</p>
+</div>
+<div class="flex items-center justify-between mt-auto pt-stack-md border-t border-outline-variant/30">
+<span class="font-body-sm text-body-sm text-outline">5 hours ago</span>
+<!-- Voting Mechanism -->
+<div class="flex items-center bg-surface-container rounded-full p-1 border border-outline-variant/50">
+<button class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-primary-fixed hover:text-primary transition-colors text-primary bg-primary-fixed-dim/30">
+<span class="material-symbols-outlined icon-fill text-[20px]" data-icon="thumb_up">thumb_up</span>
+</button>
+<span class="font-label-bold text-label-bold text-on-background px-2 min-w-[3ch] text-center">84</span>
+<button class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-error-container hover:text-error transition-colors text-outline">
+<span class="material-symbols-outlined text-[20px]" data-icon="thumb_down">thumb_down</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Standard Item 2 -->
+<article class="bg-surface-container-lowest elevation-1 rounded-xl p-stack-md flex flex-col hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-stack-md">
+<div class="flex items-center gap-2">
+<span class="bg-[#e65100]/10 text-[#e65100] px-3 py-1 rounded-full font-label-bold text-label-bold">Social</span>
+</div>
+<span class="bg-surface-dim text-on-surface-variant px-3 py-1 rounded-full font-label-bold text-label-bold border border-outline-variant/50 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="check_circle">check_circle</span>
+                            Resolved
+                        </span>
+</div>
+<div class="flex-1">
+<h3 class="font-headline-md text-[20px] leading-tight text-on-background mb-stack-sm">More plant-based options in Quad</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3 mb-stack-md">The current vegan/vegetarian options are very limited and repetitive. It would be great to see more diverse protein sources and daily specials for plant-based diets.</p>
+</div>
+<div class="flex items-center justify-between mt-auto pt-stack-md border-t border-outline-variant/30">
+<span class="font-body-sm text-body-sm text-outline">1 week ago</span>
+<!-- Voting Mechanism -->
+<div class="flex items-center bg-surface-container/50 rounded-full p-1 opacity-70">
+<div class="w-8 h-8 flex items-center justify-center text-outline">
+<span class="material-symbols-outlined icon-fill text-[20px]" data-icon="thumb_up">thumb_up</span>
+</div>
+<span class="font-label-bold text-label-bold text-on-background px-2 min-w-[3ch] text-center">156</span>
+<div class="w-8 h-8 flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[20px]" data-icon="thumb_down">thumb_down</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Standard Item 3 -->
+<article class="bg-surface-container-lowest elevation-1 rounded-xl p-stack-md flex flex-col hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-stack-md">
+<div class="flex items-center gap-2">
+<span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full font-label-bold text-label-bold">Infrastructure</span>
+</div>
+<span class="bg-primary-fixed text-on-primary-fixed px-3 py-1 rounded-full font-label-bold text-label-bold border border-primary/20 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="fiber_new">fiber_new</span>
+                            New
+                        </span>
+</div>
+<div class="flex-1">
+<h3 class="font-headline-md text-[20px] leading-tight text-on-background mb-stack-sm">Fix leaky roof in West Hall lounge</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3 mb-stack-md">Every time it rains, there is a significant leak near the printers in the West Hall student lounge. It's a slip hazard and might damage the equipment.</p>
+</div>
+<div class="flex items-center justify-between mt-auto pt-stack-md border-t border-outline-variant/30">
+<span class="font-body-sm text-body-sm text-outline">Just now</span>
+<!-- Voting Mechanism -->
+<div class="flex items-center bg-surface-container rounded-full p-1 border border-outline-variant/50">
+<button class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-primary-fixed hover:text-primary transition-colors text-outline">
+<span class="material-symbols-outlined text-[20px]" data-icon="thumb_up">thumb_up</span>
+</button>
+<span class="font-label-bold text-label-bold text-on-background px-2 min-w-[3ch] text-center">12</span>
+<button class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-error-container hover:text-error transition-colors text-outline">
+<span class="material-symbols-outlined text-[20px]" data-icon="thumb_down">thumb_down</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+</main>
+</div>
+<!-- Floating "Create Feedback" Modal Overlay (Level 2 Elevation) 
+         Note: Placed here to fulfill the requirement of showing the form design. 
+         In a real app, this would be toggled via JS or routed. 
+         We are displaying it visually centered as part of the requested UI. -->
+<!-- Checkbox hack to show/hide modal without JS could be used, but since 
+         we want to show the design cleanly, I'll render it visible but positioned 
+         fixed so it looks like an active modal state for the design review. -->
+<div class="fixed inset-0 z-[100] flex items-center justify-center bg-inverse-surface/40 backdrop-blur-sm p-margin-mobile">
+<div class="bg-surface-container-lowest w-full max-w-lg rounded-xl elevation-2 flex flex-col overflow-hidden animate-fade-in-up">
+<!-- Modal Header -->
+<div class="px-stack-md py-stack-md border-b border-outline-variant/30 flex justify-between items-center bg-surface-container-low">
+<h3 class="font-headline-md text-headline-md text-on-background">Create Feedback</h3>
+<button class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-surface-variant text-outline transition-colors">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+<!-- Modal Form Body -->
+<div class="p-stack-md flex flex-col gap-stack-md">
+<!-- Title Input -->
+<div class="flex flex-col gap-2">
+<label class="font-label-bold text-label-bold text-on-surface-variant" for="feedback-title">Title</label>
+<input class="w-full bg-[#F1F5F9] border border-transparent focus:bg-white focus:border-primary focus:ring-1 focus:ring-primary rounded-lg px-4 py-3 font-body-base text-body-base text-on-background placeholder-outline transition-all" id="feedback-title" placeholder="Briefly describe your idea or issue..." type="text"/>
+</div>
+<!-- Category Select -->
+<div class="flex flex-col gap-2">
+<label class="font-label-bold text-label-bold text-on-surface-variant" for="feedback-category">Category</label>
+<div class="relative">
+<select class="w-full bg-[#F1F5F9] border border-transparent focus:bg-white focus:border-primary focus:ring-1 focus:ring-primary rounded-lg px-4 py-3 appearance-none font-body-base text-body-base text-on-background transition-all" id="feedback-category">
+<option disabled="" selected="" value="">Select a category</option>
+<option value="infrastructure">Infrastructure &amp; Facilities</option>
+<option value="academic">Academic &amp; Library</option>
+<option value="social">Social &amp; Events</option>
+<option value="other">Other</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-outline pointer-events-none" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+<!-- Description Textarea -->
+<div class="flex flex-col gap-2">
+<label class="font-label-bold text-label-bold text-on-surface-variant" for="feedback-desc">Details</label>
+<textarea class="w-full bg-[#F1F5F9] border border-transparent focus:bg-white focus:border-primary focus:ring-1 focus:ring-primary rounded-lg px-4 py-3 font-body-base text-body-base text-on-background placeholder-outline transition-all resize-none" id="feedback-desc" placeholder="Provide more context. Why is this important?" rows="4"></textarea>
+</div>
+</div>
+<!-- Modal Footer Actions -->
+<div class="px-stack-md py-stack-md border-t border-outline-variant/30 flex justify-end gap-stack-sm bg-surface">
+<button class="h-[44px] px-6 rounded-full font-label-bold text-label-bold text-primary hover:bg-primary-fixed transition-colors">
+                    Cancel
+                </button>
+<button class="h-[44px] px-6 rounded-full font-label-bold text-label-bold bg-primary text-on-primary hover:bg-primary-container transition-colors shadow-sm">
+                    Submit Feedback
+                </button>
+</div>
+</div>
+</div>
+</body></html>

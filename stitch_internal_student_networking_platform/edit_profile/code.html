@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Edit Profile - StudentConnect</title>
+<!-- Google Fonts & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"on-secondary-container": "#006f66", "on-surface-variant": "#464555", "primary-container": "#4f46e5", primary: "#3525cd", "on-error-container": "#93000a", "tertiary-fixed-dim": "#ffb695", "primary-fixed-dim": "#c3c0ff", "surface-bright": "#fcf8ff", "on-primary": "#ffffff", "tertiary-fixed": "#ffdbcc", "on-tertiary-container": "#ffd2be", "on-secondary-fixed": "#00201d", "surface-tint": "#4d44e3", "on-error": "#ffffff", "inverse-surface": "#302f39", background: "#fcf8ff", outline: "#777587", "outline-variant": "#c7c4d8", error: "#ba1a1a", "surface-container-high": "#eae6f4", "secondary-container": "#86f2e4", "on-primary-container": "#dad7ff", secondary: "#006a61", "on-primary-fixed-variant": "#3323cc", "inverse-primary": "#c3c0ff", "surface-dim": "#dcd8e5", "on-primary-fixed": "#0f0069", tertiary: "#7e3000", "tertiary-container": "#a44100", "surface-container-lowest": "#ffffff", "surface-container-low": "#f5f2ff", surface: "#fcf8ff", "primary-fixed": "#e2dfff", "on-tertiary-fixed": "#351000", "on-tertiary": "#ffffff", "on-secondary": "#ffffff", "inverse-on-surface": "#f3effc", "secondary-fixed-dim": "#6bd8cb", "on-secondary-fixed-variant": "#005049", "on-tertiary-fixed-variant": "#7b2f00", "on-surface": "#1b1b24", "surface-container": "#f0ecf9", "secondary-fixed": "#89f5e7", "on-background": "#1b1b24", "surface-container-highest": "#e4e1ee", "surface-variant": "#e4e1ee", "error-container": "#ffdad6"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {gutter: "24px", "stack-sm": "8px", "container-max": "1280px", unit: "8px", "stack-md": "16px", "stack-lg": "32px", "margin-mobile": "16px"}, fontFamily: {"display-lg": ["Be Vietnam Pro"], "body-base": ["Be Vietnam Pro"], "headline-md": ["Be Vietnam Pro"], "label-bold": ["Be Vietnam Pro"], "body-sm": ["Be Vietnam Pro"]}, fontSize: {"display-lg": ["48px", {lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700"}], "body-base": ["16px", {lineHeight: "1.6", letterSpacing: "0", fontWeight: "400"}], "headline-md": ["24px", {lineHeight: "1.3", letterSpacing: "-0.01em", fontWeight: "600"}], "label-bold": ["12px", {lineHeight: "1", letterSpacing: "0.05em", fontWeight: "600"}], "body-sm": ["14px", {lineHeight: "1.5", letterSpacing: "0", fontWeight: "400"}]}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom input styles based on design system guidelines */
+        .ds-input {
+            background-color: theme('colors.surface-container');
+            border-color: transparent;
+        }
+        .ds-input:focus {
+            background-color: theme('colors.surface-container-lowest');
+            border-color: theme('colors.primary');
+            outline: none;
+            box-shadow: none;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-base min-h-screen pb-stack-lg">
+<!-- Task-Focused Header (Suppresses Global Nav) -->
+<header class="sticky top-0 z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 h-16 flex items-center px-gutter">
+<div class="max-w-container-max mx-auto w-full flex justify-between items-center">
+<button class="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-label-bold text-label-bold group">
+<span class="material-symbols-outlined text-[20px] group-hover:-translate-x-1 transition-transform">arrow_back</span>
+<span>BACK TO PROFILE</span>
+</button>
+<h1 class="font-headline-md text-headline-md text-on-surface absolute left-1/2 -translate-x-1/2 hidden sm:block">Edit Profile</h1>
+<button class="h-[44px] px-6 bg-primary text-on-primary rounded-lg font-label-bold text-label-bold hover:bg-primary/90 transition-colors shadow-sm">
+                SAVE CHANGES
+            </button>
+</div>
+</header>
+<main class="max-w-2xl mx-auto mt-stack-lg px-gutter space-y-stack-lg">
+<!-- Section: Basic Info -->
+<section class="bg-surface-container-lowest rounded-xl p-gutter border border-outline-variant/30 shadow-[0_4px_12px_rgba(53,37,205,0.02)]">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-stack-md">Basic Information</h2>
+<div class="flex flex-col md:flex-row gap-stack-lg">
+<!-- Avatar Upload -->
+<div class="flex-shrink-0 flex flex-col items-center gap-stack-sm">
+<div class="relative w-24 h-24 rounded-full overflow-hidden group cursor-pointer border-2 border-outline-variant/20 hover:border-primary transition-colors">
+<img alt="Profile avatar" class="w-full h-full object-cover" data-alt="Close up portrait of a young male student with short hair, natural daylight, soft focus background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDw07OjTuHced0P1ofF0fdlr_rdZZI0MTZ_KetsVJr_VYLwoZvXCN_ulA8v3XXOpKNkUONv3vyPqLhzMCDwu2LZETvhHnKKLW8DU7IK5R0sBbo_SawHGWkiOQgH9EOqbP1uMFLdqwq-4VAQDJlqADjRrmuloRXiz0jc-G41SZm18eXHI87_qAqB-xq6yri8EvHspYqCdGyrN_eCC4TEbPYo0idOvaPtLPzRqm-LXWfvXu-7qnVMBLoyJ0koL3DSHNWHYlbsoBf1898O"/>
+<div class="absolute inset-0 bg-on-surface/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-on-primary" data-weight="fill" style="font-variation-settings: 'FILL' 1;">photo_camera</span>
+</div>
+</div>
+<span class="font-label-bold text-label-bold text-outline uppercase">Change Photo</span>
+</div>
+<!-- Form Fields -->
+<div class="flex-grow space-y-stack-md">
+<div>
+<label class="block font-label-bold text-label-bold text-on-surface-variant mb-unit uppercase tracking-wider" for="displayName">Display Name</label>
+<input class="ds-input w-full px-4 py-3 rounded-lg border-2 font-body-base text-body-base text-on-surface transition-all" id="displayName" type="text" value="Alexander Wright"/>
+</div>
+<div>
+<label class="block font-label-bold text-label-bold text-on-surface-variant mb-unit uppercase tracking-wider" for="bio">Short Bio</label>
+<textarea class="ds-input w-full px-4 py-3 rounded-lg border-2 font-body-base text-body-base text-on-surface transition-all resize-none" id="bio" rows="3">Computer Science major passionate about accessible tech and machine learning. Always looking for side projects.</textarea>
+</div>
+<!-- Identity Color -->
+<div>
+<label class="block font-label-bold text-label-bold text-on-surface-variant mb-unit uppercase tracking-wider">Identity Color</label>
+<p class="font-body-sm text-body-sm text-outline mb-3">Choose a color that represents your profile aura.</p>
+<div class="flex gap-4">
+<button class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ring-2 ring-offset-2 ring-primary">
+<span class="material-symbols-outlined text-on-primary text-[16px]">check</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-secondary hover:scale-110 transition-transform"></button>
+<button class="w-8 h-8 rounded-full bg-tertiary hover:scale-110 transition-transform"></button>
+<button class="w-8 h-8 rounded-full bg-on-surface-variant hover:scale-110 transition-transform"></button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Digital Identity (Tags) -->
+<section class="bg-surface-container-lowest rounded-xl p-gutter border border-outline-variant/30 shadow-[0_4px_12px_rgba(53,37,205,0.02)]">
+<div class="mb-stack-md">
+<h2 class="font-headline-md text-headline-md text-on-surface">Digital Identity</h2>
+<p class="font-body-sm text-body-sm text-outline mt-1">Tags help peers find you for collaboration and networking.</p>
+</div>
+<div class="space-y-stack-lg">
+<!-- Skills -->
+<div>
+<label class="block font-label-bold text-label-bold text-secondary mb-unit uppercase tracking-wider">Skills (What I Offer)</label>
+<div class="flex flex-wrap gap-2 items-center">
+<div class="flex items-center gap-1 h-[32px] px-3 rounded-full bg-secondary-container/30 text-secondary font-body-sm text-body-sm">
+                            Python
+                            <button class="hover:text-on-secondary-container"><span class="material-symbols-outlined text-[16px]">close</span></button>
+</div>
+<div class="flex items-center gap-1 h-[32px] px-3 rounded-full bg-secondary-container/30 text-secondary font-body-sm text-body-sm">
+                            Data Analysis
+                            <button class="hover:text-on-secondary-container"><span class="material-symbols-outlined text-[16px]">close</span></button>
+</div>
+<div class="flex items-center gap-1 h-[32px] px-3 rounded-full bg-secondary-container/30 text-secondary font-body-sm text-body-sm">
+                            Public Speaking
+                            <button class="hover:text-on-secondary-container"><span class="material-symbols-outlined text-[16px]">close</span></button>
+</div>
+<div class="relative w-40 ml-2">
+<input class="w-full bg-transparent border-b border-outline-variant focus:border-secondary outline-none font-body-sm text-body-sm py-1 text-on-surface placeholder:text-outline transition-colors" placeholder="+ Add skill" type="text"/>
+</div>
+</div>
+</div>
+<!-- Needs -->
+<div>
+<label class="block font-label-bold text-label-bold text-tertiary mb-unit uppercase tracking-wider">Needs (Looking For)</label>
+<div class="flex flex-wrap gap-2 items-center">
+<div class="flex items-center gap-1 h-[32px] px-3 rounded-full bg-tertiary-fixed text-tertiary font-body-sm text-body-sm">
+                            UI/UX Designer
+                            <button class="hover:text-on-tertiary-fixed-variant"><span class="material-symbols-outlined text-[16px]">close</span></button>
+</div>
+<div class="flex items-center gap-1 h-[32px] px-3 rounded-full bg-tertiary-fixed text-tertiary font-body-sm text-body-sm">
+                            Mentorship
+                            <button class="hover:text-on-tertiary-fixed-variant"><span class="material-symbols-outlined text-[16px]">close</span></button>
+</div>
+<div class="relative w-40 ml-2">
+<input class="w-full bg-transparent border-b border-outline-variant focus:border-tertiary outline-none font-body-sm text-body-sm py-1 text-on-surface placeholder:text-outline transition-colors" placeholder="+ Add need" type="text"/>
+</div>
+</div>
+</div>
+<!-- Interests -->
+<div>
+<label class="block font-label-bold text-label-bold text-primary mb-unit uppercase tracking-wider">Interests</label>
+<div class="flex flex-wrap gap-2 items-center">
+<div class="flex items-center gap-1 h-[32px] px-3 rounded-full bg-primary-fixed text-on-primary-fixed font-body-sm text-body-sm">
+                            Hackathons
+                            <button class="hover:text-on-primary-fixed-variant"><span class="material-symbols-outlined text-[16px]">close</span></button>
+</div>
+<div class="relative w-40 ml-2">
+<input class="w-full bg-transparent border-b border-outline-variant focus:border-primary outline-none font-body-sm text-body-sm py-1 text-on-surface placeholder:text-outline transition-colors" placeholder="+ Add interest" type="text"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Contact & Links -->
+<section class="bg-surface-container-lowest rounded-xl p-gutter border border-outline-variant/30 shadow-[0_4px_12px_rgba(53,37,205,0.02)]">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-stack-md">Contact &amp; Links</h2>
+<div class="space-y-stack-md">
+<!-- Email Row -->
+<div class="grid grid-cols-1 md:grid-cols-[auto_1fr_auto] gap-4 items-center">
+<div class="flex items-center gap-2 text-on-surface-variant w-32">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-label-bold text-label-bold uppercase">Email</span>
+</div>
+<input class="ds-input w-full px-4 py-3 rounded-lg border-2 font-body-base text-body-base text-on-surface transition-all" type="email" value="alex.wright@university.edu"/>
+<select class="ds-input px-4 py-3 rounded-lg border-2 font-body-sm text-body-sm text-on-surface-variant appearance-none pr-10 bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23777587%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E')] bg-no-repeat bg-[position:right_12px_center]">
+<option>Same School</option>
+<option>Public</option>
+<option>Connections Only</option>
+<option>Only Me</option>
+</select>
+</div>
+<!-- LinkedIn Row (Substitute for generic social) -->
+<div class="grid grid-cols-1 md:grid-cols-[auto_1fr_auto] gap-4 items-center">
+<div class="flex items-center gap-2 text-on-surface-variant w-32">
+<span class="material-symbols-outlined">link</span>
+<span class="font-label-bold text-label-bold uppercase">LinkedIn</span>
+</div>
+<input class="ds-input w-full px-4 py-3 rounded-lg border-2 font-body-base text-body-base text-on-surface transition-all" placeholder="linkedin.com/in/username" type="text" value="linkedin.com/in/awright"/>
+<select class="ds-input px-4 py-3 rounded-lg border-2 font-body-sm text-body-sm text-on-surface-variant appearance-none pr-10 bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23777587%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E')] bg-no-repeat bg-[position:right_12px_center]">
+<option>Public</option>
+<option>Same School</option>
+<option>Connections Only</option>
+<option>Only Me</option>
+</select>
+</div>
+<!-- TikTok Row -->
+<div class="grid grid-cols-1 md:grid-cols-[auto_1fr_auto] gap-4 items-center">
+<div class="flex items-center gap-2 text-on-surface-variant w-32">
+<span class="material-symbols-outlined">play_circle</span>
+<span class="font-label-bold text-label-bold uppercase">TikTok</span>
+</div>
+<input class="ds-input w-full px-4 py-3 rounded-lg border-2 font-body-base text-body-base text-on-surface transition-all" placeholder="@username" type="text"/>
+<select class="ds-input px-4 py-3 rounded-lg border-2 font-body-sm text-body-sm text-on-surface-variant appearance-none pr-10 bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23777587%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E')] bg-no-repeat bg-[position:right_12px_center]">
+<option>Connections Only</option>
+<option>Public</option>
+<option>Same School</option>
+<option>Only Me</option>
+</select>
+</div>
+</div>
+</section>
+<!-- Section: Privacy & Security -->
+<section class="bg-surface-container-lowest rounded-xl p-gutter border border-outline-variant/30 shadow-[0_4px_12px_rgba(53,37,205,0.02)]">
+<div class="mb-stack-md flex items-center gap-2">
+<span class="material-symbols-outlined text-outline">shield_lock</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Account Transition</h2>
+</div>
+<div>
+<label class="block font-label-bold text-label-bold text-on-surface-variant mb-unit uppercase tracking-wider" for="personalEmail">Backup / Personal Email</label>
+<p class="font-body-sm text-body-sm text-outline mb-3">Link a personal email to ensure you retain access to your network after graduation when your student (.edu) email expires.</p>
+<div class="flex gap-4">
+<input class="ds-input flex-grow px-4 py-3 rounded-lg border-2 font-body-base text-body-base text-on-surface transition-all" id="personalEmail" placeholder="you@personal.com" type="email"/>
+<button class="h-[48px] px-6 border-2 border-primary text-primary rounded-lg font-label-bold text-label-bold hover:bg-primary-container/10 transition-colors whitespace-nowrap flex items-center justify-center">
+                        LINK EMAIL
+                    </button>
+</div>
+</div>
+</section>
+</main>
+</body></html>
