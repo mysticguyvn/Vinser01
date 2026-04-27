@@ -1,0 +1,88 @@
+{
+  "app": {
+    "name": "Vinser",
+    "tagline": "Student network connecting opportunities"
+  },
+  "nav": {
+    "home": "Home",
+    "search": "Search",
+    "profile": "Profile",
+    "communities": "Communities",
+    "chat": "Messages",
+    "notifications": "Notifications",
+    "settings": "Settings"
+  },
+  "auth": {
+    "login": "Log in",
+    "signup": "Sign up",
+    "logout": "Log out",
+    "email": "Email",
+    "password": "Password",
+    "forgotPassword": "Forgot password?",
+    "resetPassword": "Reset password",
+    "continueWithGoogle": "Continue with Google",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?"
+  },
+  "profile": {
+    "edit": "Edit profile",
+    "tags": "Skill tags",
+    "endorsements": "Endorsements",
+    "school": "School",
+    "bio": "Bio",
+    "experience": "Experience",
+    "skills": "Skills",
+    "projects": "Projects",
+    "connections": "Connections"
+  },
+  "search": {
+    "placeholder": "Search students, skills, schools...",
+    "noResults": "No results found",
+    "filters": "Filters",
+    "school": "School",
+    "skills": "Skills",
+    "location": "Location"
+  },
+  "community": {
+    "create": "Create community",
+    "join": "Join",
+    "leave": "Leave",
+    "members": "Members",
+    "posts": "Posts",
+    "about": "About"
+  },
+  "feedback": {
+    "give": "Give feedback",
+    "received": "Feedback received",
+    "given": "Feedback given",
+    "anonymous": "Anonymous",
+    "public": "Public"
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "confirm": "Confirm",
+    "back": "Back",
+    "next": "Next",
+    "submit": "Submit",
+    "search": "Search",
+    "close": "Close",
+    "more": "Show more",
+    "less": "Show less"
+  },
+  "errors": {
+    "required": "This field is required",
+    "invalidEmail": "Invalid email address",
+    "tooShort": "Too short (minimum {{min}} characters)",
+    "tooLong": "Too long (maximum {{max}} characters)",
+    "networkError": "Network error. Please try again.",
+    "unauthorized": "You need to log in to perform this action",
+    "forbidden": "You don't have permission to perform this action",
+    "notFound": "Content not found"
+  }
+}

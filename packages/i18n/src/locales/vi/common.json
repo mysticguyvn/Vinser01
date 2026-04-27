@@ -1,0 +1,88 @@
+{
+  "app": {
+    "name": "Vinser",
+    "tagline": "Mạng lưới sinh viên kết nối cơ hội"
+  },
+  "nav": {
+    "home": "Trang chủ",
+    "search": "Tìm kiếm",
+    "profile": "Hồ sơ",
+    "communities": "Cộng đồng",
+    "chat": "Tin nhắn",
+    "notifications": "Thông báo",
+    "settings": "Cài đặt"
+  },
+  "auth": {
+    "login": "Đăng nhập",
+    "signup": "Đăng ký",
+    "logout": "Đăng xuất",
+    "email": "Email",
+    "password": "Mật khẩu",
+    "forgotPassword": "Quên mật khẩu?",
+    "resetPassword": "Đặt lại mật khẩu",
+    "continueWithGoogle": "Tiếp tục với Google",
+    "noAccount": "Chưa có tài khoản?",
+    "hasAccount": "Đã có tài khoản?"
+  },
+  "profile": {
+    "edit": "Chỉnh sửa hồ sơ",
+    "tags": "Thẻ năng lực",
+    "endorsements": "Xác nhận kỹ năng",
+    "school": "Trường",
+    "bio": "Giới thiệu",
+    "experience": "Kinh nghiệm",
+    "skills": "Kỹ năng",
+    "projects": "Dự án",
+    "connections": "Kết nối"
+  },
+  "search": {
+    "placeholder": "Tìm kiếm sinh viên, kỹ năng, trường...",
+    "noResults": "Không tìm thấy kết quả",
+    "filters": "Bộ lọc",
+    "school": "Trường",
+    "skills": "Kỹ năng",
+    "location": "Địa điểm"
+  },
+  "community": {
+    "create": "Tạo cộng đồng",
+    "join": "Tham gia",
+    "leave": "Rời khỏi",
+    "members": "Thành viên",
+    "posts": "Bài viết",
+    "about": "Giới thiệu"
+  },
+  "feedback": {
+    "give": "Gửi phản hồi",
+    "received": "Phản hồi nhận được",
+    "given": "Phản hồi đã gửi",
+    "anonymous": "Ẩn danh",
+    "public": "Công khai"
+  },
+  "common": {
+    "save": "Lưu",
+    "cancel": "Hủy",
+    "delete": "Xóa",
+    "edit": "Chỉnh sửa",
+    "loading": "Đang tải...",
+    "error": "Đã xảy ra lỗi",
+    "retry": "Thử lại",
+    "confirm": "Xác nhận",
+    "back": "Quay lại",
+    "next": "Tiếp theo",
+    "submit": "Gửi",
+    "search": "Tìm kiếm",
+    "close": "Đóng",
+    "more": "Xem thêm",
+    "less": "Thu gọn"
+  },
+  "errors": {
+    "required": "Trường này là bắt buộc",
+    "invalidEmail": "Email không hợp lệ",
+    "tooShort": "Quá ngắn (tối thiểu {{min}} ký tự)",
+    "tooLong": "Quá dài (tối đa {{max}} ký tự)",
+    "networkError": "Lỗi kết nối mạng. Vui lòng thử lại.",
+    "unauthorized": "Bạn cần đăng nhập để thực hiện thao tác này",
+    "forbidden": "Bạn không có quyền thực hiện thao tác này",
+    "notFound": "Không tìm thấy nội dung"
+  }
+}
