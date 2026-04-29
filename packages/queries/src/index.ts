@@ -1,1 +1,2 @@
-export const QUERIES_VERSION = "0.0.1";
+export * from "./tags";
+export * from "./categories";
