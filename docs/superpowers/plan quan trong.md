@@ -75,7 +75,7 @@ This sprint focuses on establishing the end-to-end flow for user authentication,
 
 ### apps/web (UI & Next.js App Router)
 
-#### [MODIFY] `apps/web/src/middleware.ts`
+#### [MODIFY] `apps/web/src/proxy.ts`
 - Protect routes (`/profile`, `/onboarding`, `/settings`).
 - Enforce Onboarding Completion: Check `session.user.app_metadata.onboarding_completed`. If missing or false, redirect to `/onboarding`. (Avoids expensive DB joins in middleware, and using `app_metadata` instead of `user_metadata` prevents client-side bypasses).
 
