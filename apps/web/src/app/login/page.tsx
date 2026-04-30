@@ -23,10 +23,6 @@ export default async function LoginPage() {
         </div>
 
         <LoginButton />
-
-        <p className="mt-8 text-body-sm text-on-surface-variant">
-          Chỉ hỗ trợ đăng nhập bằng email trường học.
-        </p>
       </div>
     </div>
   );
