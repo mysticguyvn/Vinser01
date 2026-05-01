@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "main": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./profile": "./src/profile.ts"
+  },
   "dependencies": {
     "@tanstack/react-query": "^5.0.0",
     "@vinser/core": "*"

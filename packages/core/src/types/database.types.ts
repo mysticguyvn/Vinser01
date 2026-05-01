@@ -14,16 +14,265 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      categories: {
+        Row: {
+          created_at: string | null
+          id: string
+          name: string
+          type: string
+        }
+        Insert: {
+          created_at?: string | null
+          id?: string
+          name: string
+          type: string
+        }
+        Update: {
+          created_at?: string | null
+          id?: string
+          name?: string
+          type?: string
+        }
+        Relationships: []
+      }
+      connections: {
+        Row: {
+          created_at: string | null
+          id: string
+          recipient_id: string
+          requester_id: string
+          status: Database["public"]["Enums"]["connection_status"] | null
+          updated_at: string | null
+        }
+        Insert: {
+          created_at?: string | null
+          id?: string
+          recipient_id: string
+          requester_id: string
+          status?: Database["public"]["Enums"]["connection_status"] | null
+          updated_at?: string | null
+        }
+        Update: {
+          created_at?: string | null
+          id?: string
+          recipient_id?: string
+          requester_id?: string
+          status?: Database["public"]["Enums"]["connection_status"] | null
+          updated_at?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "connections_recipient_id_fkey"
+            columns: ["recipient_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "connections_requester_id_fkey"
+            columns: ["requester_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      profile_tags: {
+        Row: {
+          created_at: string | null
+          profile_id: string
+          tag_id: string
+        }
+        Insert: {
+          created_at?: string | null
+          profile_id: string
+          tag_id: string
+        }
+        Update: {
+          created_at?: string | null
+          profile_id?: string
+          tag_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "profile_tags_profile_id_fkey"
+            columns: ["profile_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "profile_tags_tag_id_fkey"
+            columns: ["tag_id"]
+            isOneToOne: false
+            referencedRelation: "tags"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      profiles: {
+        Row: {
+          avatar_color: string
+          bio: string | null
+          contact_email: string | null
+          contact_email_privacy:
+            | Database["public"]["Enums"]["privacy_level"]
+            | null
+          created_at: string | null
+          full_name: string
+          id: string
+          onboarding_completed_at: string | null
+          social_links: Json | null
+          social_links_privacy:
+            | Database["public"]["Enums"]["privacy_level"]
+            | null
+          updated_at: string | null
+        }
+        Insert: {
+          avatar_color: string
+          bio?: string | null
+          contact_email?: string | null
+          contact_email_privacy?:
+            | Database["public"]["Enums"]["privacy_level"]
+            | null
+          created_at?: string | null
+          full_name: string
+          id: string
+          onboarding_completed_at?: string | null
+          social_links?: Json | null
+          social_links_privacy?:
+            | Database["public"]["Enums"]["privacy_level"]
+            | null
+          updated_at?: string | null
+        }
+        Update: {
+          avatar_color?: string
+          bio?: string | null
+          contact_email?: string | null
+          contact_email_privacy?:
+            | Database["public"]["Enums"]["privacy_level"]
+            | null
+          created_at?: string | null
+          full_name?: string
+          id?: string
+          onboarding_completed_at?: string | null
+          social_links?: Json | null
+          social_links_privacy?:
+            | Database["public"]["Enums"]["privacy_level"]
+            | null
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
+      schools: {
+        Row: {
+          created_at: string | null
+          display_name: string | null
+          domain: string
+          id: string
+        }
+        Insert: {
+          created_at?: string | null
+          display_name?: string | null
+          domain: string
+          id?: string
+        }
+        Update: {
+          created_at?: string | null
+          display_name?: string | null
+          domain?: string
+          id?: string
+        }
+        Relationships: []
+      }
+      tags: {
+        Row: {
+          category_id: string
+          created_at: string | null
+          id: string
+          is_system: boolean | null
+          name: string
+        }
+        Insert: {
+          category_id: string
+          created_at?: string | null
+          id?: string
+          is_system?: boolean | null
+          name: string
+        }
+        Update: {
+          category_id?: string
+          created_at?: string | null
+          id?: string
+          is_system?: boolean | null
+          name?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "tags_category_id_fkey"
+            columns: ["category_id"]
+            isOneToOne: false
+            referencedRelation: "categories"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      user_schools: {
+        Row: {
+          created_at: string | null
+          id: string
+          is_verified: boolean | null
+          school_domain: string
+          school_email: string
+          status: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string | null
+          id?: string
+          is_verified?: boolean | null
+          school_domain: string
+          school_email: string
+          status: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string | null
+          id?: string
+          is_verified?: boolean | null
+          school_domain?: string
+          school_email?: string
+          status?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "user_schools_school_domain_fkey"
+            columns: ["school_domain"]
+            isOneToOne: false
+            referencedRelation: "schools"
+            referencedColumns: ["domain"]
+          },
+          {
+            foreignKeyName: "user_schools_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      check_is_connected: { Args: { target_user_id: string }; Returns: boolean }
+      check_same_school: { Args: { target_user_id: string }; Returns: boolean }
     }
     Enums: {
-      [_ in never]: never
+      connection_status: "pending" | "accepted" | "rejected"
+      privacy_level: "public" | "connections" | "private"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -150,6 +399,9 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      connection_status: ["pending", "accepted", "rejected"],
+      privacy_level: ["public", "connections", "private"],
+    },
   },
 } as const
